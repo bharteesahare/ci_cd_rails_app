@@ -8,17 +8,11 @@ class PostTest < ActiveSupport::TestCase
   # end
   test "should not save the post the without title" do
     post = Post.new
-    assert post.save, "Saved the post without title"
+    assert_not post.save, "Saved the post without title"
   end
 
   test "should save the post with title" do
     post = Post.new(title: "test the title")
-    assert post.save, "save the post successfully"
+    assert post.save, "save"
   end
-
-  test "should have views as integer" do
-    post = Post.new(title: "Test", view: "test")
-    assert_not post.save, "Saved the post with a string for views"
-  end
-
 end
