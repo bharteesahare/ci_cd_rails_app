@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # add the migration for view count
 
 class AddViewsToPost < ActiveRecord::Migration[7.0]

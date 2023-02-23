@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # this is the post module
 
 class PostsController < ApplicationController
