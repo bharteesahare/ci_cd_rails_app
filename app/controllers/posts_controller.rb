@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# this is the post module
+
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
 
@@ -9,7 +11,9 @@ class PostsController < ApplicationController
   end
 
   # GET /posts/1 or /posts/1.json
-  def show; end
+  def show
+    @post.update(views: @post.views + 1)
+  end
 
   # GET /posts/new
   def new
